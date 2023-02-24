@@ -74,7 +74,7 @@ export const FileUploadField = ({
           UploadNftContentMutationVariables
         >("fileUpload", {
           name: file.name,
-          description: "Created using Mintme by Niftory",
+          description: "Created using Flow Beats",
           contentType: file.type,
           posterContentType: file.type,
         })
