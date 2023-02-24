@@ -1,5 +1,5 @@
 import { Box, Center, Flex, Heading, VStack } from "@chakra-ui/react"
-import { HowItWorks, SupportingResources, Showcase, LoginText } from "ui/Home"
+import { LoginText } from "ui/Home"
 
 import AppLayout from "../../../components/AppLayout"
 import { CollectibleCreateForm } from "../../../components/form/CollectibleCreateForm"
@@ -31,9 +31,6 @@ const NewItemPage = () => {
               <CollectibleCreateForm />
             </Flex>
           </Center>
-          <HowItWorks />
-          <SupportingResources />
-          <Showcase />
         </VStack>
       </AppLayout>
     </>
