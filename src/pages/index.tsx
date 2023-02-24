@@ -6,12 +6,9 @@ import { CollectibleCreateForm } from "../components/form/CollectibleCreateForm"
 import { LoginText } from "../ui/Home/LoginText"
 import { GetNftSetsQuery } from "../../generated/graphql"
 import { useBackendClient } from "../graphql/backendClient"
-import { Showcase } from "ui/Home/Showcase"
-import { HowItWorks } from "ui/Home/HowItWorks"
 
 import { BsChevronDown as ChevronDownIcon } from "react-icons/bs"
 import { useRef } from "react"
-import { SupportingResources } from "ui/Home/SupportingResources"
 
 const HomePage = () => {
   const scrollRef = useRef<HTMLDivElement>()
@@ -28,7 +25,6 @@ const HomePage = () => {
               maxW="600"
               fontSize={{ base: "3xl", md: "5xl" }}
             >
-              Mint your digital assets in seconds for free
             </Heading>
           </Center>
           <Flex
@@ -54,9 +50,6 @@ const HomePage = () => {
           <Text fontWeight="extrabold">LEARN MORE</Text>
           <ChevronDownIcon size="1.2rem" />
         </VStack>
-        <HowItWorks ref={scrollRef} />
-        <SupportingResources />
-        <Showcase />
       </Center>
     </AppLayout>
   )

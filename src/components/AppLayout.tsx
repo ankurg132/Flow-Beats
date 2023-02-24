@@ -2,8 +2,6 @@ import { Box, Flex } from "@chakra-ui/layout"
 import { useBreakpointValue, useDisclosure, useMediaQuery } from "@chakra-ui/react"
 import Head from "next/head"
 import { DEFAULT_TITLE } from "../constants/title"
-
-import { Footer } from "../ui/Footer/Footer"
 import { Navbar } from "../ui/Navbar/Nav"
 import { Sidebar } from "./sidenav/Sidebar"
 type Props = {
@@ -41,7 +39,6 @@ export default function AppLayout({ children, showSidebar = false, title = DEFAU
           </Flex>
         </Flex>
       </Sidebar>
-      <Footer />
     </>
   )
 }
