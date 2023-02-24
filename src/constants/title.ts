@@ -1,1 +1,1 @@
-export const DEFAULT_TITLE = "MintMe powered by Niftory"
+export const DEFAULT_TITLE = "Flow Beats"
