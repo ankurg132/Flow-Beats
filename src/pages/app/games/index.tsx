@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react"
 import React from "react"
 import AppLayout from "../../../components/AppLayout"
 
-const CollectionPage = () => {
+const Games = () => {
   return (
     <AppLayout showSidebar={true} title="NFT Collection | MintMe">
       games
@@ -10,5 +10,5 @@ const CollectionPage = () => {
   )
 }
 
-CollectionPage.requireAuth = true
-export default CollectionPage
+Games.requireAuth = true
+export default Games
