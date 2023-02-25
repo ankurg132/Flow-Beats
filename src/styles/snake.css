@@ -1,0 +1,122 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #eef1f4;
+    color: #11253e;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    background-color: #f2f5f7;
+    border-radius: 6px;
+    box-shadow: 0px 4px 18px rgba(18, 38, 63, 0.12);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+canvas {
+    background-color: white;
+    box-shadow: 0px 2px 4px rgba(227, 233, 237, 0.5);
+}
+section {
+    padding: 0 18px 2px 18px;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+section p {
+    padding: 0;
+    margin: 0;
+}
+section p:not(:first-child) {
+    margin: 6px 0 0 0;
+}
+section p svg {
+    margin: 0 6px 0 0;
+    width: 18px !important;
+    text-align: center;
+}
+section .score {
+    padding: 0 0 2px 0;
+}
+section .controls {
+    text-align: right;
+    padding: 0 0 2px 0;
+}
+section .controls svg {
+    margin: 0 0 0 6px;
+}
+button {
+    margin: 0;
+    padding: 8px 18px;
+    min-width: 120px;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+    color: white;
+    background-color: #0170f3;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(1, 112, 243, 0.3);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+div.game-overlay {
+    width: 100%;
+    height: 381px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.game-overlay p {
+    padding: 0;
+    margin: 0;
+}
+div.game-overlay p.large {
+    margin: 12px 0 0 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+div.game-overlay p.final-score {
+    font-size: 16px;
+    margin: 6px 0 0 0;
+    font-weight: 300;
+}
+div.game-overlay p.final-score + button {
+    margin: 18px 0 0 0;
+}
+footer {
+    width: 100%;
+    font-size: 12px;
+    color: #617691;
+    position: fixed;
+    left: 0;
+    bottom: 30px;
+    opacity: 0.6;
+    text-align: center;
+}
+footer a {
+    color: inherit;
+    font-weight: 500;
+    text-decoration: none;
+}
