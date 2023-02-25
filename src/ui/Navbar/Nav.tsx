@@ -21,7 +21,7 @@ import { useRouter } from "next/router"
 export const Navbar = ({ onOpen }) => {
   const { session, signIn, isLoading } = useAuthContext()
   let onClick = () => {
-    signIn("/app/collection")
+    signIn("/app/games")
     posthog.capture("HEADER_LOGIN", {
       posthogEventDetail: "Sign In with Google invoked from top banner",
     })
