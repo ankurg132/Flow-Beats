@@ -16,7 +16,6 @@ import { FiMenu } from "react-icons/fi"
 import { FaGoogle, FaRegUser as UserIcon } from "react-icons/fa"
 import { IoIosAddCircleOutline as AddIcon } from "react-icons/io"
 import { useAuthContext } from "../../hooks/useAuthContext"
-import { BsDiscord } from "react-icons/bs"
 import posthog from "posthog-js"
 import { useRouter } from "next/router"
 export const Navbar = ({ onOpen }) => {
@@ -73,7 +72,6 @@ export const Navbar = ({ onOpen }) => {
                 })
               }}
             >
-              <BsDiscord size="2rem" color="#2D3436" />
             </ChakraLink>
           ),
         },
@@ -157,7 +155,6 @@ export const Navbar = ({ onOpen }) => {
               alignItems="center"
               gap="0.3rem"
             >
-              <BsDiscord size="1.5rem" color="#2D3436" />
             </ChakraLink>
           ),
         },
