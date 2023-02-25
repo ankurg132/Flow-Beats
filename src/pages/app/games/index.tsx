@@ -8,7 +8,7 @@ const Games = () => {
     <AppLayout showSidebar={true} title="NFT Collection | MintMe">
       <Link href="/app/games/memorygame">Memory game</Link>
       <br />
-      <Link href="/app/games/tictactoe">Spooky Tic-Tac-Toe</Link>
+      <Link href="/app/games/snake">Snake game</Link>
       <br />
       <Link href="/app/games/tic">tic tac toe</Link>
     </AppLayout>
