@@ -14,6 +14,7 @@ import { Navbar as NiftoryNavbar } from "./Navbar"
 import { FiMenu } from "react-icons/fi"
 
 import { FaGoogle, FaRegUser as UserIcon } from "react-icons/fa"
+import { StarIcon} from "@chakra-ui/icons"
 import { IoIosAddCircleOutline as AddIcon } from "react-icons/io"
 import { useAuthContext } from "../../hooks/useAuthContext"
 import posthog from "posthog-js"
@@ -79,6 +80,23 @@ export const Navbar = ({ onOpen }) => {
     } else {
       return [
         {
+          href: "/app/games",
+          component: (
+            <Link href="/app/games" passHref>
+              <ChakraLink
+                fontWeight="bold"
+                display="flex"
+                alignItems="center"
+                color="content.400"
+                gap="0.3rem"
+              >
+                <StarIcon/>
+                <Hide below="md">Games</Hide>
+              </ChakraLink>
+            </Link>
+          ),
+        },
+        {
           title: "New Collection",
           href: "/",
           component: (
@@ -101,29 +119,31 @@ export const Navbar = ({ onOpen }) => {
             </Link>
           ),
         },
-        {
-          title: "New Item",
-          href: "/app/new-item",
-          component: (
-            <Link href="/app/new-item" passHref>
-              <ChakraLink
-                fontWeight="bold"
-                display="flex"
-                alignItems="center"
-                color="content.400"
-                gap="0.3rem"
-                onClick={() =>
-                  posthog.capture("HEADER_NEW_ITEM", {
-                    posthogEventDetail: "Create new item from button",
-                  })
-                }
-              >
-                <AddIcon size={25} />
-                <Hide below="md"> Create</Hide>
-              </ChakraLink>
-            </Link>
-          ),
-        },
+        
+
+        // {
+        //   title: "New Item",
+        //   href: "/app/new-item",
+        //   component: (
+        //     <Link href="/app/new-item" passHref>
+        //       <ChakraLink
+        //         fontWeight="bold"
+        //         display="flex"
+        //         alignItems="center"
+        //         color="content.400"
+        //         gap="0.3rem"
+        //         onClick={() =>
+        //           posthog.capture("HEADER_NEW_ITEM", {
+        //             posthogEventDetail: "Create new item from button",
+        //           })
+        //         }
+        //       >
+        //         <AddIcon size={25} />
+        //         <Hide below="md"> Create</Hide>
+        //       </ChakraLink>
+        //     </Link>
+        //   ),
+        // },
         {
           href: "/app/account",
           component: (
