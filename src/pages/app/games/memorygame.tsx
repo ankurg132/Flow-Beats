@@ -10,6 +10,7 @@ export default function Memorygame() {
   const [matchedCards, setMatchedCards] = useState([]);
   const [moves, setMoves] = useState(0);
   const [gameOver, setGameOver] = useState(false);
+  // const [moves, setMoves] = useState(0);
   useEffect(() => {
     initialize();
   }, []);
@@ -55,6 +56,11 @@ export default function Memorygame() {
     }
   };
 
+  const mintNFT = () => {
+    // Mint the NFT
+    console.log("NFT minted!");
+  };
+
   return (
     <AppLayout title="NFT Collection | MintMe">
     <div className="container">
@@ -87,6 +93,11 @@ export default function Memorygame() {
         <button onClick={() => initialize()} className="reset-btn">
           Reset
         </button>
+        {gameOver && moves < 30 && (
+    <button onClick={() => mintNFT()} className="mint-btn">
+      Mint NFT
+    </button>
+  )}
       </div>
     </div>
     </AppLayout>
