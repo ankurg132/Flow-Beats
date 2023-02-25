@@ -76,7 +76,7 @@ export const WalletDetails = (props: WalletDetailsProps) => {
                   description={nfts?.items?.length ?? ""}
                   icon={WalletItemsIcon}
                   title={"Number of Items"}
-                  onClick={() => router.push("/app/collection")}
+                  onClick={() => router.push("/app/games")}
                 />
               </Box>
             </Tooltip>

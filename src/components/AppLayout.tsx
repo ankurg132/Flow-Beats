@@ -3,7 +3,7 @@ import { useBreakpointValue, useDisclosure, useMediaQuery } from "@chakra-ui/rea
 import Head from "next/head"
 import { DEFAULT_TITLE } from "../constants/title"
 import { Navbar } from "../ui/Navbar/Nav"
-import { Sidebar } from "./sidenav/Sidebar"
+// import { Sidebar } from "./sidenav/Sidebar"
 type Props = {
   children: React.ReactNode
   showSidebar?: boolean
@@ -24,7 +24,7 @@ export default function AppLayout({ children, showSidebar = false, title = DEFAU
       <Head>
         <title>{title}</title>
       </Head>
-      <Sidebar showSidebar={showSidebar} isOpen={isOpen} onOpen={onOpen} onClose={onClose}>
+      {/* <Sidebar showSidebar={showSidebar} isOpen={isOpen} onOpen={onOpen} onClose={onClose}> */}
         <Flex direction="column" minH="90vh" w="full">
           <Navbar onOpen={onOpen} />
           <Flex bg="page.background" flexGrow={1}>
@@ -38,7 +38,7 @@ export default function AppLayout({ children, showSidebar = false, title = DEFAU
             </Box>
           </Flex>
         </Flex>
-      </Sidebar>
+      {/* </Sidebar> */}
     </>
   )
 }
