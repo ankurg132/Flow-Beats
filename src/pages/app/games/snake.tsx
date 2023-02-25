@@ -329,6 +329,11 @@ export default function SnakeGame() {
     }
   }, [previousVelocity])
 
+  const mintNFT = () => {
+    // Mint the NFT
+    console.log("NFT minted!");
+  };
+
   return (
     <AppLayout showSidebar={true} title="NFT Collection | MintMe">
       <main>
@@ -371,9 +376,12 @@ export default function SnakeGame() {
               {newHighscore ? `🎉 New Highscore 🎉` : `You scored: ${score}`}
             </p>
             {!running && isLost && (
+              <>
               <button onClick={startGame}>
                 {countDown === 4 ? 'Restart Game' : countDown}
               </button>
+              <button onClick={() => mintNFT()}>Mint NFT</button>
+              </>
             )}
           </div>
         )}
