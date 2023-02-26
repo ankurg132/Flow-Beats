@@ -101,197 +101,198 @@ export const CollectibleForm = (props: FormProps) => {
   }
 
   return (
-    <Stack spacing="1rem">
-      <Stack spacing="0rem" borderRadius="xl" p={{ base: "1rem" }}>
-        <Field name="content">
-          {({ form }) => {
-            const formFile = form?.values?.content?.files?.[0]
-            return (
-              <FormControl isInvalid={errors.content && !!touched.content} isRequired id="content">
-                <FileUploadField
-                  initialFilePreview={
-                    formFile
-                      ? {
-                          type: formFile?.contentType,
-                          url: getBaseUrl(formFile?.url),
-                        }
-                      : null
-                  }
-                  setLoading={setIsFileLoading}
-                  onUpload={(content) => {
-                    form.setFieldValue("contentId", content.id)
-                    form.setFieldValue("content", content)
-                    if (!session && !isLoading) {
-                      posthog.capture("FORM_FILE_UPLOADED", {
-                        posthogEventDetail: "React-dropzone used for file upload (before sign-in)",
-                        content,
-                      })
-                    }
-                  }}
-                  accept={{
-                    "image/png": [],
-                    "image/jpg": [],
-                    "image/jpeg": [],
-                    "image/heif": [],
-                    "image/webp": [],
-                    "video/*": [],
-                  }}
-                />
+    // <Stack spacing="1rem">
+    //   <Stack spacing="0rem" borderRadius="xl" p={{ base: "1rem" }}>
+    //     <Field name="content">
+    //       {({ form }) => {
+    //         const formFile = form?.values?.content?.files?.[0]
+    //         return (
+    //           <FormControl isInvalid={errors.content && !!touched.content} isRequired id="content">
+    //             <FileUploadField
+    //               initialFilePreview={
+    //                 formFile
+    //                   ? {
+    //                       type: formFile?.contentType,
+    //                       url: getBaseUrl(formFile?.url),
+    //                     }
+    //                   : null
+    //               }
+    //               setLoading={setIsFileLoading}
+    //               onUpload={(content) => {
+    //                 form.setFieldValue("contentId", content.id)
+    //                 form.setFieldValue("content", content)
+    //                 if (!session && !isLoading) {
+    //                   posthog.capture("FORM_FILE_UPLOADED", {
+    //                     posthogEventDetail: "React-dropzone used for file upload (before sign-in)",
+    //                     content,
+    //                   })
+    //                 }
+    //               }}
+    //               accept={{
+    //                 "image/png": [],
+    //                 "image/jpg": [],
+    //                 "image/jpeg": [],
+    //                 "image/heif": [],
+    //                 "image/webp": [],
+    //                 "video/*": [],
+    //               }}
+    //             />
 
-                <FormErrorMessage fontWeight="semibold">
-                  {errors.content?.toString()}
-                </FormErrorMessage>
-              </FormControl>
-            )
-          }}
-        </Field>
+    //             <FormErrorMessage fontWeight="semibold">
+    //               {errors.content?.toString()}
+    //             </FormErrorMessage>
+    //           </FormControl>
+    //         )
+    //       }}
+    //     </Field>
 
-        {values?.contentId && (
-          <>
-            <Field name="title">
-              {({ field, form }) => (
-                <FormControl isInvalid={errors.title && touched.title} id="title" isRequired>
-                  <VStack
-                    alignItems="flex-start"
-                    py="1rem"
-                    spacing="0.25rem"
-                    direction={{ base: "column", md: "row" }}
-                  >
-                    <FormLabel
-                      fontWeight="semibold"
-                      color="gray.600"
-                      fontSize="xl"
-                      my="auto"
-                      htmlFor="title"
-                    >
-                      Title
-                    </FormLabel>
-                    <Spacer />
-                    <Input
-                      variant="outline"
-                      rounded="2xl"
-                      size="lg"
-                      w={{ base: "100%" }}
-                      {...field}
-                      id="title"
-                      placeholder="My Title"
-                      maxLength={50}
-                      ondirty
-                    />
-                  </VStack>
+    //     {values?.contentId && (
+    //       <>
+    //         <Field name="title">
+    //           {({ field, form }) => (
+    //             <FormControl isInvalid={errors.title && touched.title} id="title" isRequired>
+    //               <VStack
+    //                 alignItems="flex-start"
+    //                 py="1rem"
+    //                 spacing="0.25rem"
+    //                 direction={{ base: "column", md: "row" }}
+    //               >
+    //                 <FormLabel
+    //                   fontWeight="semibold"
+    //                   color="gray.600"
+    //                   fontSize="xl"
+    //                   my="auto"
+    //                   htmlFor="title"
+    //                 >
+    //                   Title
+    //                 </FormLabel>
+    //                 <Spacer />
+    //                 <Input
+    //                   variant="outline"
+    //                   rounded="2xl"
+    //                   size="lg"
+    //                   w={{ base: "100%" }}
+    //                   {...field}
+    //                   id="title"
+    //                   placeholder="My Title"
+    //                   maxLength={50}
+    //                   ondirty
+    //                 />
+    //               </VStack>
 
-                  <FormErrorMessage fontWeight="semibold">{form.errors.title}</FormErrorMessage>
-                </FormControl>
-              )}
-            </Field>
-            <Field name="description">
-              {({ field, form }) => (
-                <FormControl
-                  isInvalid={errors.description && touched.description}
-                  id="description"
-                  isRequired
-                >
-                  <VStack
-                    alignItems="flex-start"
-                    justifyContent="space-between"
-                    py="1rem"
-                    spacing="0.25rem"
-                    direction={{ base: "column", md: "row" }}
-                  >
-                    <FormLabel
-                      fontWeight="semibold"
-                      color="gray.600"
-                      fontSize="xl"
-                      my="auto"
-                      htmlFor="description"
-                    >
-                      Description
-                    </FormLabel>
+    //               <FormErrorMessage fontWeight="semibold">{form.errors.title}</FormErrorMessage>
+    //             </FormControl>
+    //           )}
+    //         </Field>
+    //         <Field name="description">
+    //           {({ field, form }) => (
+    //             <FormControl
+    //               isInvalid={errors.description && touched.description}
+    //               id="description"
+    //               isRequired
+    //             >
+    //               <VStack
+    //                 alignItems="flex-start"
+    //                 justifyContent="space-between"
+    //                 py="1rem"
+    //                 spacing="0.25rem"
+    //                 direction={{ base: "column", md: "row" }}
+    //               >
+    //                 <FormLabel
+    //                   fontWeight="semibold"
+    //                   color="gray.600"
+    //                   fontSize="xl"
+    //                   my="auto"
+    //                   htmlFor="description"
+    //                 >
+    //                   Description
+    //                 </FormLabel>
 
-                    <Textarea
-                      variant="outline"
-                      size="lg"
-                      rounded="2xl"
-                      w={{ base: "100%" }}
-                      {...field}
-                      id="description"
-                      placeholder="Description"
-                      maxLength={300}
-                    />
-                  </VStack>
-                  <FormErrorMessage fontWeight="semibold">
-                    {form.errors.description}
-                  </FormErrorMessage>
-                </FormControl>
-              )}
-            </Field>
-            <VStack
-              alignItems="flex-start"
-              py="1rem"
-              spacing="0.25rem"
-              direction={{ base: "column", md: "row" }}
-            >
-              <FormLabel
-                fontWeight="semibold"
-                my="auto"
-                color="gray.600"
-                fontSize="xl"
-                display="flex"
-                alignItems="center"
-              >
-                Properties
-                <InfoPopOver message="Properties that will be added to the blockchain for any minted NFTs." />
-              </FormLabel>
-              <FieldArray name="metadata">
-                {(arrayHelpers) => <MetadataForm arrayHelpers={arrayHelpers} values={values} />}
-              </FieldArray>
-            </VStack>
-            <Field name="numEntities">
-              {({ field, form }) => (
-                <FormControl
-                  id="numEntities"
-                  isRequired
-                  isInvalid={errors.numEntities && touched.numEntities}
-                >
-                  <VStack
-                    alignItems="flex-start"
-                    py="1rem"
-                    spacing="0.25rem"
-                    direction={{ base: "column", md: "row" }}
-                  >
-                    <FormLabel
-                      fontWeight="semibold"
-                      my="auto"
-                      color="gray.600"
-                      fontSize="xl"
-                      htmlFor="numEntities"
-                      display="flex"
-                      alignItems="center"
-                    >
-                      Supply
-                      <InfoPopOver message="Number of NFTs that can be minted from this template" />
-                    </FormLabel>
-                    <Spacer />
-                    <NumberInput
-                      variant="outline"
-                      size="lg"
-                      w={{ base: "100%" }}
-                      {...field}
-                      id="numEntities"
-                    >
-                      <NumberInputField {...field} id="numEntities" rounded="2xl" />
-                    </NumberInput>
-                  </VStack>
+    //                 <Textarea
+    //                   variant="outline"
+    //                   size="lg"
+    //                   rounded="2xl"
+    //                   w={{ base: "100%" }}
+    //                   {...field}
+    //                   id="description"
+    //                   placeholder="Description"
+    //                   maxLength={300}
+    //                 />
+    //               </VStack>
+    //               <FormErrorMessage fontWeight="semibold">
+    //                 {form.errors.description}
+    //               </FormErrorMessage>
+    //             </FormControl>
+    //           )}
+    //         </Field>
+    //         <VStack
+    //           alignItems="flex-start"
+    //           py="1rem"
+    //           spacing="0.25rem"
+    //           direction={{ base: "column", md: "row" }}
+    //         >
+    //           <FormLabel
+    //             fontWeight="semibold"
+    //             my="auto"
+    //             color="gray.600"
+    //             fontSize="xl"
+    //             display="flex"
+    //             alignItems="center"
+    //           >
+    //             Properties
+    //             <InfoPopOver message="Properties that will be added to the blockchain for any minted NFTs." />
+    //           </FormLabel>
+    //           <FieldArray name="metadata">
+    //             {(arrayHelpers) => <MetadataForm arrayHelpers={arrayHelpers} values={values} />}
+    //           </FieldArray>
+    //         </VStack>
+    //         <Field name="numEntities">
+    //           {({ field, form }) => (
+    //             <FormControl
+    //               id="numEntities"
+    //               isRequired
+    //               isInvalid={errors.numEntities && touched.numEntities}
+    //             >
+    //               <VStack
+    //                 alignItems="flex-start"
+    //                 py="1rem"
+    //                 spacing="0.25rem"
+    //                 direction={{ base: "column", md: "row" }}
+    //               >
+    //                 <FormLabel
+    //                   fontWeight="semibold"
+    //                   my="auto"
+    //                   color="gray.600"
+    //                   fontSize="xl"
+    //                   htmlFor="numEntities"
+    //                   display="flex"
+    //                   alignItems="center"
+    //                 >
+    //                   Supply
+    //                   <InfoPopOver message="Number of NFTs that can be minted from this template" />
+    //                 </FormLabel>
+    //                 <Spacer />
+    //                 <NumberInput
+    //                   variant="outline"
+    //                   size="lg"
+    //                   w={{ base: "100%" }}
+    //                   {...field}
+    //                   id="numEntities"
+    //                 >
+    //                   <NumberInputField {...field} id="numEntities" rounded="2xl" />
+    //                 </NumberInput>
+    //               </VStack>
 
-                  <FormErrorMessage fontWeight="semibold">
-                    {form.errors.numEntities}
-                  </FormErrorMessage>
-                </FormControl>
-              )}
-            </Field>
-          </>
-        )}
-      </Stack>
-    </Stack>
+    //               <FormErrorMessage fontWeight="semibold">
+    //                 {form.errors.numEntities}
+    //               </FormErrorMessage>
+    //             </FormControl>
+    //           )}
+    //         </Field>
+    //       </>
+    //     )}
+    //   </Stack>
+    // </Stack>
+    <div></div>
   )
 }
