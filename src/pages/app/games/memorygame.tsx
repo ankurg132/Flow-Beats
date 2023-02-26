@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react"
+import Link from "next/link";
 import React from "react"
 import { useEffect, useState } from "react";
 import AppLayout from "../../../components/AppLayout"
@@ -93,10 +94,14 @@ export default function Memorygame() {
         <button onClick={() => initialize()} className="reset-btn">
           Reset
         </button>
-        {gameOver && moves < 30 && (
-    <button onClick={() => mintNFT()} className="mint-btn">
+        <Link href="/app/new-item"><button className="mint-btn">
       Mint NFT
     </button>
+    </Link>
+        {gameOver && moves < 45 && (
+          <button onClick={() => mintNFT()} className="mint-btn">
+            Mint NFT
+          </button>
   )}
       </div>
     </div>
