@@ -20,6 +20,34 @@ import posthog from "posthog-js"
 import { WalletSwitcherModal } from "ui/Modal/WalletSwitcherModal"
 import { useGraphQLQuery } from "graphql/useGraphQLQuery"
 
+const styles = `
+.card {
+ width: 190px;
+ height: 254px;
+ background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+ border-radius: 20px;
+ transition: all .3s;
+}
+
+.card2 {
+ width: 190px;
+ height: 254px;
+ background-color: #1a1a1a;
+ border-radius:;
+ transition: all .2s;
+}
+
+.card2:hover {
+ transform: scale(0.98);
+ border-radius: 20px;
+}
+
+.card:hover {
+ box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+`
+
+
 export interface WalletDetailsProps {
   walletAddress: string
   walletStatus: string
@@ -51,42 +79,48 @@ export const WalletDetails = (props: WalletDetailsProps) => {
       ) : (
         <>
           <WalletSwitcherModal disclosure={disclosure} />
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing="4" minW={"280px"} p="1rem">
-            <Tooltip label="View wallet on flowscan" hasArrow placement="top">
-              <Box cursor="pointer">
-                <WalletGridBox
-                  description={walletAddress}
-                  icon={WalletDetailsIcon}
-                  title={"Wallet Address"}
-                  onClick={() => {
-                    const url = `${process.env.NEXT_PUBLIC_FLOW_SCAN_URL}/account/${walletAddress}`
-                    posthog.capture("ACCOUNT_OPEN_WALLET_ON_FLOWSCAN", {
-                      posthogEventDetail: "Open wallet on Flowscan",
-                      url,
-                    })
-                    window.open(url)
-                  }}
-                />
-              </Box>
-            </Tooltip>
-            <WalletGridBox description={walletStatus} icon={WalletStatusIcon} title={"Status"} />
-            <Tooltip label="View your nfts" hasArrow placement="top">
-              <Box cursor="pointer">
-                <WalletGridBox
-                  description={nfts?.items?.length ?? ""}
-                  icon={WalletItemsIcon}
-                  title={"Number of Items"}
-                  onClick={() => router.push("/app/games")}
-                />
-              </Box>
-            </Tooltip>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing="4" minW={"280px"} p="1rem" backgroundColor="dark">
+            <Box cursor="pointer">
+              <WalletGridBox
+                description={walletAddress}
+                icon={WalletDetailsIcon}
+                title={"Wallet Address"}
+                onClick={() => {
+                  const url = `${process.env.NEXT_PUBLIC_FLOW_SCAN_URL}/account/${walletAddress}`
+                  posthog.capture("ACCOUNT_OPEN_WALLET_ON_FLOWSCAN", {
+                    posthogEventDetail: "Open wallet on Flowscan",
+                    url,
+                  })
+                  window.open(url)
+                }}
+              />
+            </Box>
 
-            <WalletGridBox
-              description={walletOwnerEmail}
-              icon={WalletOwnerIcon}
-              title={"Wallet Owner"}
-              showTooltop
-            />
+            <Box cursor="pointer">
+              <WalletGridBox description={walletStatus} icon={WalletStatusIcon} title={"Status"} />
+            </Box>
+
+
+            <Box cursor="pointer">
+
+              <WalletGridBox
+                description={nfts?.items?.length ?? ""}
+                icon={WalletItemsIcon}
+                title={"Number of Items"}
+                onClick={() => router.push("/app/games")}
+              />
+
+            </Box>
+
+            <Box cursor="pointer">
+              <WalletGridBox
+                description={walletOwnerEmail}
+                icon={WalletOwnerIcon}
+                title={"Wallet Owner"}
+                showTooltop
+              />
+            </Box>
+
           </SimpleGrid>
           <Box>
             <Button
