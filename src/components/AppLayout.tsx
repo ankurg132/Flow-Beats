@@ -25,7 +25,7 @@ export default function AppLayout({ children, showSidebar = false, title = DEFAU
         <title>{title}</title>
       </Head>
       {/* <Sidebar showSidebar={showSidebar} isOpen={isOpen} onOpen={onOpen} onClose={onClose}> */}
-        <Flex direction="column" minH="90vh" w="full">
+        <Flex direction="column" minH="100vh" w="100vw">
           <Navbar onOpen={onOpen} />
           <Flex bg="page.background" flexGrow={1}>
             <Box
