@@ -46,7 +46,7 @@ export const WalletCard = ({ wallet, onClick }: Props) => {
             </Tag>
           )}
         </Flex>
-        <Flex gap="0.2rem" fontSize="0.8rem">
+        <Flex marginTop={"4%"} gap="0.2rem" fontSize="0.8rem">
           Wallet State:{" "}
           {
             <Tag

@@ -53,19 +53,19 @@ export const WalletSwitcherModal = ({ disclosure }: MenuModalProps) => {
   return (
     <Modal onClose={onClose} size="xl" isOpen={isOpen} isCentered>
       <ModalOverlay />
-      <ModalContent overflow="hidden" rounded="2xl" m="1rem" p="2rem">
+      <ModalContent style={{ border: '2px solid white', borderRadius: '1rem' }} bgColor={"black"} color="white" overflow="hidden" rounded="2xl" m="1rem" p="2rem">
         <Flex justifyContent="space-between">
           <Heading fontSize="1.4rem">Wallets</Heading>
         </Flex>
         <VStack spacing="0.2rem" mt="1rem">
           {wallets?.map((wallet) => (
-            <WalletCard wallet={wallet as Wallet} key={wallet.address} />
+            <WalletCard  wallet={wallet as Wallet} key={wallet.address} />
           ))}
-          <ButtonGroup pt="1rem">
+          <ButtonGroup  color={"black"} pt="1rem">
             <RegisterWallet onRegister={() => reExecuteQuery({ requestPolicy: "network-only" })} />
             <Button
+            _hover={{bgColor: "black", color: "white", boxShadow: "0 0 8px 2px red" }}
               cursor="pointer"
-              _hover={{ bg: "gray.100" }}
               fontWeight="bold"
               onClick={onClose}
               color="red"

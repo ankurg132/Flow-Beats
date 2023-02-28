@@ -124,7 +124,7 @@ export const ShareModal = ({
   return (
     <Modal onClose={onClose} size="2xl" isOpen={isOpen} isCentered>
       <ModalOverlay />
-      <ModalContent overflow="hidden" p={{ base: "1rem", md: "2rem" }} m="1rem" bg="black" color="white">
+      <ModalContent style={{ border: '2px solid white', borderRadius: '1rem' }} overflow="hidden" p={{ base: "1rem", md: "2rem" }} m="1rem" bg="black" color="white">
         <Flex gap="0.5rem" flexDirection="column" alignItems="center" w="full">
           <Heading fontSize="22px" >Share Your NFT!</Heading>
           <Flex gap="1rem" w="full">

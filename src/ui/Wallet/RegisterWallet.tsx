@@ -38,7 +38,7 @@ export function RegisterWallet({ onRegister }: Props) {
   }
 
   return (
-    <Button px="4" py="2" size="md" onClick={handleRegister}>
+    <Button _hover={{bgColor: "black", color: "white", boxShadow: "0 0 8px 2px #0077b6" }} px="4" py="2" size="md" onClick={handleRegister}>
       Add your wallet
     </Button>
   )
