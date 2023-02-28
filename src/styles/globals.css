@@ -484,3 +484,32 @@ footer a {
 .game-overlay{
   background-color: transparent !important;
 }
+
+.error-button {
+  background-color: #0170f3;
+  background-color:  #5c23a8;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 8px;
+  margin-right: 1rem;
+  cursor: pointer;
+  /* margin: 1rem ; */
+  /* margin-top: 1rem; */
+  max-width: fit-content;
+}
+.error-button-log {
+  background-color: #0170f3;
+  background-color:  #5c23a8;
+  color: white;
+  padding: 0.7rem 1.4rem;
+  max-width: fit-content;
+  margin-top: 2rem;
+  cursor: pointer;
+  /* margin: 1.4rem ; */
+  font-weight: 600;
+  align-items: center;
+  border-radius: 8px;
+  height: max-content;
+}

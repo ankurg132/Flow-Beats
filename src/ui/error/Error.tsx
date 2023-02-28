@@ -12,7 +12,7 @@ function Error({ statusCode }: ErrorProps) {
     <>
       <Box
         as="section"
-        bg="page.background"
+        bg="black"
         bgSize="cover"
         paddingTop="10%"
         position="relative"
@@ -21,23 +21,23 @@ function Error({ statusCode }: ErrorProps) {
         <VStack>
           <Center>
             <SectionHeader
-              standardText="Uh oh."
+              standardText=""
               highlightedText={
-                statusCode == 404 ? "We couldn't find that page." : "Something went wrong."
+                statusCode == 404 ? " Uh oh! We couldn't find that page." : "Something went wrong."
               }
             />
           </Center>
-          <Center>
-            <Stack direction={["column", "row"]}>
+          <Center py="8">
+            <Stack direction={["column", "row"]}  >
               <Link href="/" passHref>
-                <Button px="12" py="8" fontSize="md" borderRadius="0">
+                <div className="error-button"  >
                   Go Home
-                </Button>
+                </div>
               </Link>
               {authContext?.session && (
-                <Button px="12" py="8" fontSize="md" borderRadius="0" onClick={authContext.signOut}>
+                <div className="error-button-log"  onClick={authContext.signOut}>
                   Log Out
-                </Button>
+                </div>
               )}
             </Stack>
           </Center>
