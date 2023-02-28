@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react"
 import { useEffect, useState } from "react";
 import AppLayout from "../../../components/AppLayout"
+import { useRouter } from 'next/router';
 
 const board = ["🤖", "👽", "👻", "🤡", "🐧", "🦚", "😄", "🚀"];
 export default function Memorygame() {
@@ -15,6 +16,14 @@ export default function Memorygame() {
   useEffect(() => {
     initialize();
   }, []);
+
+  const router = useRouter();
+  const [previousUrl, setPreviousUrl] = useState('');
+
+  useEffect(() => {
+    sessionStorage.setItem('currentUrl', router.asPath);
+  }, [router.asPath]);
+
 
   useEffect(() => {
     if (matchedCards.length == 16) {
