@@ -1,4 +1,4 @@
-import { Center, Modal, ModalContent, ModalOverlay, VStack } from "@chakra-ui/react"
+import { Center, color, Modal, ModalContent, ModalOverlay, VStack } from "@chakra-ui/react"
 
 export interface MenuModalItems {
   title: string
@@ -19,16 +19,17 @@ export const MenuModal = ({ disclosure, items }: MenuModalProps) => {
   return (
     <Modal onClose={onClose} size="md" isOpen={isOpen} isCentered>
       <ModalOverlay />
-      <ModalContent overflow="hidden" rounded="2xl" m="1rem">
-        <VStack spacing="0">
+      <ModalContent  rounded="3xl" padding={0} >
+       
           {items.map(({ title, onClick }) => (
             <Center
               key={title}
               w="full"
               h="50px"
               cursor="pointer"
-              _hover={{ bg: "gray.100" }}
+              _hover={{ bg: "black", color:"white" }}
               fontWeight="bold"
+              
               borderBottom="2px"
               borderColor="gray.200"
               onClick={() => {
@@ -43,16 +44,16 @@ export const MenuModal = ({ disclosure, items }: MenuModalProps) => {
             w="full"
             h="50px"
             cursor="pointer"
-            _hover={{ bg: "gray.100" }}
+            _hover={{ bg: "black" }}
             fontWeight="bold"
-            borderBottom="2px"
-            borderColor="gray.200"
+           
+            
             onClick={onClose}
             color="red"
           >
             Cancel
           </Center>
-        </VStack>
+        
       </ModalContent>
     </Modal>
   )
