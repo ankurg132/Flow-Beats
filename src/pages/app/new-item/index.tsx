@@ -8,9 +8,9 @@ const NewItemPage = () => {
   return (
     <>
       <AppLayout title="Mint NFT | Flow Beats">
-        <VStack w="full" p="1rem" my="3rem" gap="3rem">
-          <Center px={{ base: "0", md: "1rem" }} w="full" flexDirection="column">
-            <Center mb={{ base: "1rem", md: "4rem" }} px={{ base: "0", md: "1.4rem" }}>
+        <VStack w="full" p="1rem" my="0rem" gap="3rem">
+          <Center px={{ base: "0", md: "0rem" }} w="full" flexDirection="column">
+            {/* <Center mb={{ base: "1rem", md: "4rem" }} px={{ base: "0", md: "1.4rem" }}>
               <Heading
                 as="h3"
                 fontWeight="700"
@@ -20,7 +20,7 @@ const NewItemPage = () => {
               >
                 New Item
               </Heading>
-            </Center>
+            </Center> */}
             <Flex
               minW={{ base: "100%", md: "800px" }}
               rounded="xl"

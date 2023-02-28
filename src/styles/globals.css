@@ -513,3 +513,11 @@ footer a {
   border-radius: 8px;
   height: max-content;
 }
+.centred-and{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1rem;
+  width: 100%;
+}
