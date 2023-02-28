@@ -518,6 +518,18 @@ footer a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 1rem;
+  /* margin: 1rem; */
   width: 100%;
+  /* border-radius: 2px solid white; */
+  background-color: #000000;
+}
+.css-1lc4ppz{
+  background-color: #000000;
+}
+.css-1lc4ppz button{
+  margin-top: 1rem;
+}
+.css-1wlph2e{
+  border: 1px solid white;
+  padding-top: 1rem;
 }
