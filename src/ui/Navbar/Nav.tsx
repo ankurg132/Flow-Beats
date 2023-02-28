@@ -66,15 +66,16 @@ export const Navbar = ({ onOpen }) => {
           href: "/app/games",
           component: (
             <Link href="/app/games" passHref>
-              <ChakraLink
+              <Box
                 fontWeight="bold"
                 display="flex"
                 alignItems="center"
                 color="content.400"
+                cursor="pointer"
                 gap="0.3rem"
               >
                 <div style={{ color: "white" }}>Games</div>
-              </ChakraLink>
+              </Box>
             </Link>
           ),
         },
@@ -83,20 +84,21 @@ export const Navbar = ({ onOpen }) => {
           href: "/",
           component: (
             <Link href="/app/collection" passHref>
-              <ChakraLink
+              <Box
                 fontWeight="bold"
                 display="flex"
                 alignItems="center"
                 color="content.400"
                 gap="0.3rem"
+                cursor="pointer"
                 onClick={() =>
                   posthog.capture("HEADER_VIEW_COLLECTION", {
                     posthogEventDetail: "Opened My Collection from top banner",
                   })
                 }
               >
-                <div style={{ color: "white" }}> My Collection</div>
-              </ChakraLink>
+                <div style={{ color: "white" }}>Collection</div>
+              </Box>
             </Link>
           ),
         },
@@ -105,16 +107,17 @@ export const Navbar = ({ onOpen }) => {
           href: "/app/account",
           component: (
             <Link href="/app/account" passHref>
-              <ChakraLink
+              <Box
                 fontWeight="bold"
                 display="flex"
                 alignItems="center"
+                cursor="pointer"
                 color="content.400"
                 gap="0.3rem"
               >
                 {/* <UserIcon size={20} /> */}
                 <div style={{ color: "white" }}>Account</div>
-              </ChakraLink>
+              </Box>
             </Link>
           ),
         },
