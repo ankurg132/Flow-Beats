@@ -20,34 +20,6 @@ import posthog from "posthog-js"
 import { WalletSwitcherModal } from "ui/Modal/WalletSwitcherModal"
 import { useGraphQLQuery } from "graphql/useGraphQLQuery"
 
-const styles = `
-.card {
- width: 190px;
- height: 254px;
- background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
- border-radius: 20px;
- transition: all .3s;
-}
-
-.card2 {
- width: 190px;
- height: 254px;
- background-color: #1a1a1a;
- border-radius:;
- transition: all .2s;
-}
-
-.card2:hover {
- transform: scale(0.98);
- border-radius: 20px;
-}
-
-.card:hover {
- box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-}
-`
-
-
 export interface WalletDetailsProps {
   walletAddress: string
   walletStatus: string
@@ -79,7 +51,7 @@ export const WalletDetails = (props: WalletDetailsProps) => {
       ) : (
         <>
           <WalletSwitcherModal disclosure={disclosure} />
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing="4" minW={"280px"} p="1rem" backgroundColor="dark">
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing="4" w={"100%"} p="1rem" backgroundColor="black">
             <Box cursor="pointer">
               <WalletGridBox
                 description={walletAddress}
@@ -119,17 +91,19 @@ export const WalletDetails = (props: WalletDetailsProps) => {
                 title={"Wallet Owner"}
                 showTooltop
               />
+
             </Box>
 
           </SimpleGrid>
           <Box>
             <Button
-              backgroundColor="brand.400"
+              backgroundColor="#DEDEDE"
+              _hover={{ bgColor: "black", color: "white", boxShadow: "0 0 8px 2px #0077b6" }}
               onClick={(e) => {
                 disclosure.onOpen()
               }}
             >
-              Switch or Add Wallet
+              Switch Wallet
             </Button>
           </Box>
 
