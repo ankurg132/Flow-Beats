@@ -56,26 +56,7 @@ export const Navbar = ({ onOpen }) => {
             </Button>
           ),
         },
-        {
-          href: "https://discord.gg/QAgDQXUGsU",
-          component: (
-            <ChakraLink
-              href="https://discord.gg/QAgDQXUGsU"
-              target="_blank"
-              color="content.400"
-              fontWeight="bold"
-              display="flex"
-              alignItems="center"
-              mt="0.1rem"
-              onClick={() => {
-                posthog.capture("HEADER_LAUNCH_DISCORD", {
-                  posthogEventDetail: "Opened Discord from top banner",
-                })
-              }}
-            >
-            </ChakraLink>
-          ),
-        },
+       
       ]
     } else {
       return [
@@ -90,8 +71,8 @@ export const Navbar = ({ onOpen }) => {
                 color="content.400"
                 gap="0.3rem"
               >
-                <StarIcon/>
-                <Hide below="md">Games</Hide>
+               
+               <div style={{ color: 'white' }}>Games</div>
               </ChakraLink>
             </Link>
           ),
@@ -113,37 +94,15 @@ export const Navbar = ({ onOpen }) => {
                   })
                 }
               >
-                <Image src="/grid-icon.svg" alt="new collection" w="30px" />
-                <Hide below="md"> My Collection</Hide>
+                
+                <div style={{ color: 'white' }}> My Collection</div>
               </ChakraLink>
             </Link>
           ),
         },
         
 
-        // {
-        //   title: "New Item",
-        //   href: "/app/new-item",
-        //   component: (
-        //     <Link href="/app/new-item" passHref>
-        //       <ChakraLink
-        //         fontWeight="bold"
-        //         display="flex"
-        //         alignItems="center"
-        //         color="content.400"
-        //         gap="0.3rem"
-        //         onClick={() =>
-        //           posthog.capture("HEADER_NEW_ITEM", {
-        //             posthogEventDetail: "Create new item from button",
-        //           })
-        //         }
-        //       >
-        //         <AddIcon size={25} />
-        //         <Hide below="md"> Create</Hide>
-        //       </ChakraLink>
-        //     </Link>
-        //   ),
-        // },
+        
         {
           href: "/app/account",
           component: (
@@ -155,35 +114,36 @@ export const Navbar = ({ onOpen }) => {
                 color="content.400"
                 gap="0.3rem"
               >
-                <UserIcon size={20} />
-                <Hide below="md">Account</Hide>
+                {/* <UserIcon size={20} /> */}
+                <div style={{ color: 'white' }}>Account</div>
               </ChakraLink>
             </Link>
           ),
         },
-        {
-          href: "https://discord.gg/QAgDQXUGsU",
-          component: (
-            <ChakraLink
-              ml={{ md: "1rem" }}
-              mt="0.1rem"
-              href="https://discord.gg/QAgDQXUGsU"
-              target="_blank"
-              color="content.400"
-              fontWeight="bold"
-              display="flex"
-              alignItems="center"
-              gap="0.3rem"
-            >
-            </ChakraLink>
-          ),
-        },
+        // {
+        //   href: "https://discord.gg/QAgDQXUGsU",
+        //   component: (
+        //     <ChakraLink
+        //       ml={{ md: "1rem" }}
+        //       mt="0.1rem"
+        //       href="https://discord.gg/QAgDQXUGsU"
+        //       target="_blank"
+        //       color="content.400"
+        //       fontWeight="bold"
+        //       display="flex"
+        //       alignItems="center"
+        //       gap="0.3rem"
+        //     >
+        //     </ChakraLink>
+        //   ),
+        // },
       ]
     }
   }, [session])
 
   return (
     <>
+    
       <NiftoryNavbar
         leftComponent={
           <>
@@ -195,15 +155,14 @@ export const Navbar = ({ onOpen }) => {
                 icon={<FiMenu />}
               />
             )}
-            <Link href="/" passHref>
-              <Image
+                      <Link href="/" passHref>
+              <Box
                 boxSize={{ md: "70" }}
-                src="/mintme-logo-header.svg"
-                alt="logo"
                 zIndex="1000"
                 w={{ base: "6rem", md: "13rem" }}
                 py="4px"
               />
+              
             </Link>
           </>
         }
