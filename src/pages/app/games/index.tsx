@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const Games = () => {
   return (
-    <AppLayout  showSidebar={true} title="NFT Collection | MintMe">
+    <AppLayout  showSidebar={true} title="Games | Flow Beats">
 
       <div
   className="btn"

@@ -63,7 +63,7 @@ export default function Memorygame() {
   };
 
   return (
-    <AppLayout title="NFT Collection | MintMe">
+    <AppLayout title="Memory Game | Flow Beats">
     <div className="container memory-game-cont">
       <div className="menu moves-para">
         <p>{`Moves - ${moves}`}</p>
