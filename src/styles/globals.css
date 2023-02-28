@@ -350,7 +350,7 @@ footer a {
   background-color: #0170f3;
   background-color:  #5c23a8;;
   color: white;
-  padding: 0.6rem 1.4rem;
+  padding: 0.8rem 1.6rem;
   font-weight: 600;
   align-items: center;
   justify-content: space-between;
@@ -427,4 +427,60 @@ footer a {
 } 
 .game__menu{
   margin-bottom: 1rem;
+}
+.main-snake-comntainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+.main-snake-comntainer section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 35rem;
+}
+.main-snake-comntainer section button{
+  background-color: #0170f3;
+  background-color:  #5c23a8;;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 8px;
+  margin: 1rem ;
+  margin-top: 2rem;
+  max-width: fit-content;
+}
+.main-snake-comntainer canvas{
+  background-color: white;
+}
+.score{
+  font-size: 1.4rem;
+  width: 100%;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.game-overlay button{
+  background-color: #0170f3;
+  background-color:  #5c23a8;;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 8px;
+  margin: 1rem ;
+  margin-top: 1rem;
+  max-width: fit-content;
+}
+.game-overlay{
+  background-color: transparent !important;
 }
