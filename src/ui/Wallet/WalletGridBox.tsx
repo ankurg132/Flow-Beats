@@ -29,7 +29,7 @@ export const WalletGridBox = ({
       justifyContent={{ base: "flex-start", md: "space-between" }}
       bgColor="white"
       w="full"
-      _hover={{ bgColor: onClick && "gray.100" }}
+      _hover={{ bgColor: "red" }}
       onClick={onClick}
     >
       <HStack spacing="4" w="fit-content">
