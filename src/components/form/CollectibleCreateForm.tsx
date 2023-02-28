@@ -18,7 +18,10 @@ import { CollectibleForm } from "./CollectibleForm"
 import { metadataToJson } from "./MetadataForm"
 import { useRouter } from "next/router"
 import { useTransfer } from "../../hooks/useTransfer"
+import Image from "next/image"
 import posthog from "posthog-js"
+import snakenft from "../../pages/Snakenft.png"
+import memorynft from "../../pages/Memorynft.png"
 
 const createNFTModel = async (setId: string, nftModelData: NftModelCreateInput) => {
   let toastId
@@ -385,7 +388,10 @@ export const CollectibleCreateForm = (props: StackProps) => {
                   setIsFileLoading={setIsFileLoading}
                   onRedirect={onRedirect}
                 />
-
+                  <div className="centred-and">
+                    {currentUrl == '/app/games/snake' ? <Image src={snakenft} alt="and" height={400} width={300}  /> : <Image src={memorynft} alt="and" height={400} width={300}  />}
+                    
+                  </div>
                 <Flex justifyContent="space-between" px="4" pb="4">
                   {session && !currentNFTModel && (
                     // <Button
@@ -405,12 +411,15 @@ export const CollectibleCreateForm = (props: StackProps) => {
                     // </Button>
                     <div></div>
                   )}
+                  
                   <Button
                     ref={bottomScrollRef}
                     isLoading={fetching && !isDraft}
                     disabled={fetching && isDraft}
                     type="submit"
                     w="full"
+                    backgroundColor="#3a3ad6"
+                    color="white"
                     boxSizing="border-box"
                     onClick={() => {
                       setIsDraft(false)
