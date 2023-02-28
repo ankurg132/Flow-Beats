@@ -110,12 +110,7 @@ export const MasonryCard = ({ nftModel, reExecuteQuery, hidePopUp, nft }: Masonr
             shareDisclosure.onOpen()
           },
         },
-        {
-          title: "Embed",
-          onClick: () => {
-            embedDisclosure.onOpen()
-          },
-        },
+        
 
         nftModel?.state === "UNMINTED" && {
           title: "Transfer to Wallet",

@@ -138,7 +138,7 @@ export const ShareModal = ({
           <Flex justifyContent="space-between" w="full">
             <Flex alignItems="center" gap="0.5rem">
               <Text display="inline-flex" pl="2" fontSize="15px" lineHeight="1">
-                Any one with the link can
+               CHOOSE:
               </Text>
               <Select
                 disabled={!isOwner}
