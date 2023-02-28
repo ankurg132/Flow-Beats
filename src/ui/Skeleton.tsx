@@ -14,7 +14,7 @@ export const TableSkeleton = (props: { isLoading: boolean }) => {
 
 export const LoginSkeleton = () => {
   return (
-    <Stack h="100vh" py="40vh" px="10" boxShadow="lg" bg="page.background">
+    <Stack h="100vh" py="40vh" px="10" boxShadow="lg" bg="black">
       <Center>
         <SimpleGrid columns={3} spacing={10}>
           <SkeletonCircle size="10" maxW="xl" />

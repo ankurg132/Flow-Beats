@@ -259,10 +259,10 @@ export const MasonryCard = ({ nftModel, reExecuteQuery, hidePopUp, nft }: Masonr
           background="content.400"
           alt={nftModel?.title}
           draggable="false"
-          minH="100px"
+          minH="100%"
         />
 
-        <Tooltip label={getReadableStateValue(mintState)} hasArrow placement="top">
+        {/* <Tooltip label={getReadableStateValue(mintState)} hasArrow placement="top">
           <Center
             rounded="full"
             position="absolute"
@@ -273,8 +273,8 @@ export const MasonryCard = ({ nftModel, reExecuteQuery, hidePopUp, nft }: Masonr
             w="40px"
           >
             {IconTable[mintState]}
-          </Center>
-        </Tooltip>
+          </Center> */}
+        {/* </Tooltip> */}
       </Box>
     </>
   )
