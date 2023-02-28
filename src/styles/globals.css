@@ -365,4 +365,29 @@ footer a {
 .logo_imagee{
   height: 5px !important;
 }
+
+.memory-game-cont{
+  color: white !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.moves-para p{
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+.menu-containing-btn button{
+  margin-top: 2rem;
+  background-color: #0170f3;
+  background-color:  #5c23a8;;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 8px;
+}
  
