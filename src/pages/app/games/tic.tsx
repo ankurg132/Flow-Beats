@@ -3,6 +3,7 @@ import React from "react"
 import { useEffect, useState } from "react"
 import AppLayout from "../../../components/AppLayout"
 import Link from "next/link"
+import { useRouter } from "next/router"
 
 const WINNING_COMBO = [
   [0, 1, 2],
@@ -60,6 +61,13 @@ const Tic = () => {
       }
     })
   }
+
+  const router = useRouter();
+  const [previousUrl, setPreviousUrl] = useState('');
+
+  useEffect(() => {
+    sessionStorage.setItem('currentUrl', router.asPath);
+  }, [router.asPath]);
 
   const reset = () => {
     setBoardData({

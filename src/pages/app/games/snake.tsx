@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import useInterval from '@use-it/interval'
 import AppLayout from "../../../components/AppLayout"
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 
 
 type Apple = {
@@ -25,6 +26,13 @@ export default function SnakeGame() {
   // Game Settings
   const minGameSpeed = 10
   const maxGameSpeed = 15
+
+  const router = useRouter();
+  const [previousUrl, setPreviousUrl] = useState('');
+
+  useEffect(() => {
+    sessionStorage.setItem('currentUrl', router.asPath);
+  }, [router.asPath]);
 
   // Game State
   const [gameDelay, setGameDelay] = useState<number>(1000 / minGameSpeed)
