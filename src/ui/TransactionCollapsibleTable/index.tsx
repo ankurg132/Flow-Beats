@@ -40,7 +40,7 @@ export const TransactionCollapsibleTable = ({
   ...props
 }: Props) => (
   <Accordion allowToggle w="full" {...props}>
-    <AccordionItem w="full" border="0" mt="-1rem">
+    <AccordionItem w="full" border="0"  mt="-1rem">
       <AccordionButton w="full" py="1rem" p={buttonPadding}>
         <Flex
           alignItems="center"
@@ -50,16 +50,16 @@ export const TransactionCollapsibleTable = ({
           maxW={{ base: "7rem", md: "100%" }}
         >
           Blockchain Transactions
-          <InfoPopOver
+          {/* <InfoPopOver
             placement="top"
             message="Transactions performed for this NFT in the blockchain"
-          />
+          /> */}
         </Flex>
         <AccordionIcon />
       </AccordionButton>
 
-      <AccordionPanel padding={contentPadding} bg="whitesmoke">
-        <Flex py="0.5rem" flexDir="column" gap="0.5rem">
+      <AccordionPanel    padding={contentPadding} bg="black">
+        <Flex  py="0.5rem" flexDir="column" gap="0.5rem">
           {transactions.map((item) => (
             <Flex
               gap="0.4rem"

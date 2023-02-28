@@ -38,9 +38,9 @@ export const WalletSelectModal = ({ disclosure, onWalletSelect }: MenuModalProps
   const flowUser = useFlowUser()
 
   return (
-    <Modal onClose={onClose} size="xl" isOpen={isOpen} isCentered>
+    <Modal onClose={onClose}  size="xl" isOpen={isOpen} isCentered>
       <ModalOverlay />
-      <ModalContent overflow="hidden" rounded="2xl" m="1rem" p="1.4rem">
+      <ModalContent style={{ border: '2px solid white', borderRadius: '1rem' }} bg={"black"} color={"white"} height={"50%"} overflow="hidden" rounded="2xl" m="1rem" p="1.4rem">
         <Flex justifyContent="space-between">
           <Heading fontSize="1.4rem">Select Wallet</Heading>
         </Flex>

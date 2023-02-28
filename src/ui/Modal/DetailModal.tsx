@@ -171,7 +171,7 @@ export const DetailModal = ({
         onExit={handleExit}
       />
       <ModalOverlay />
-      <ModalContent overflow="hidden" rounded="none" m="1rem">
+      <ModalContent style={{ border: '2px solid white', borderRadius: '1rem' }}  overflow="hidden" bg={"black"} color={"white"} rounded="3xl" m="1rem">
         <AlertModal
           disclosure={alertDisclosure}
           title="Delete Template?"
@@ -246,8 +246,9 @@ export const DetailModal = ({
                       "video/*": [],
                     }}
                     h="100%"
+                    w={"100%"}
                     disabled={!isEditable}
-                    bgColor="content.400"
+                    bgColor="black"
                   >
                     <Center
                       rounded="full"
@@ -273,7 +274,7 @@ export const DetailModal = ({
                   <>
                     <VStack
                       p="3rem 3rem 1rem 3rem"
-                      borderBottom={"2px"}
+                      borderBottom={"1px"}
                       borderColor={"brand.300"}
                       alignItems="flex-start"
                       w="full"
@@ -333,6 +334,7 @@ export const DetailModal = ({
                                       id="claim"
                                       cursor="pointer"
                                       size="20px"
+                                      color="white"
                                       onClick={() => onShare("claim")}
                                     />
                                   </span>
@@ -345,6 +347,7 @@ export const DetailModal = ({
                                     id="view"
                                     cursor="pointer"
                                     size="20px"
+                                    color="white"
                                     onClick={() => onShare("view")}
                                   />
                                 </span>
@@ -357,6 +360,7 @@ export const DetailModal = ({
                                     href={getContractUrl(contract)}
                                     target="_blank"
                                     rel="noreferrer"
+                                    
                                     onClick={() =>
                                       posthog.capture("NFT_VIEW_CONTRACT", {
                                         posthogEventDetail: "View Contract called",
@@ -364,7 +368,7 @@ export const DetailModal = ({
                                       })
                                     }
                                   >
-                                    <ContractIcon size="20px" />
+                                    <ContractIcon  color="white" size="20px" />
                                   </a>
                                 </Tooltip>
                               )}
@@ -391,7 +395,7 @@ export const DetailModal = ({
                       <Flex
                         direction="column"
                         p="0rem 0 1rem 3rem"
-                        borderBottom={"2px"}
+                        borderBottom={"1px"}
                         borderColor={"brand.300"}
                         alignItems="flex-start"
                         w="full"
@@ -428,10 +432,10 @@ export const DetailModal = ({
                               )
                             )}
                           </Text>
-                          <InfoPopOver
+                          {/* <InfoPopOver
                             placement="top"
                             message="Properties that will be added to the blockchain for any minted NFTs."
-                          />
+                          /> */}
                         </Flex>
 
                         {propertiesEditMode ? (
@@ -458,7 +462,7 @@ export const DetailModal = ({
                     {!nft && (
                       <Flex
                         p="0rem 3rem 1rem 3rem"
-                        borderBottom={"2px"}
+                        borderBottom={"1px"}
                         borderColor={"brand.300"}
                         justifyContent="space-between"
                         w="full"
@@ -467,10 +471,10 @@ export const DetailModal = ({
                           <Text fontWeight="bold" fontSize="16px">
                             Supply
                           </Text>
-                          <InfoPopOver
+                          {/* <InfoPopOver
                             placement="top"
                             message="Number of NFTs that can be minted from this template"
-                          />
+                          /> */}
                         </Flex>
                         <Field name="quantity">
                           {({ form, field }) => (
@@ -523,7 +527,7 @@ export const DetailModal = ({
                       <Flex
                         direction="column"
                         p="0rem 3rem 1rem 3rem"
-                        borderBottom={"2px"}
+                        borderBottom={"1px"}
                         borderColor={"brand.300"}
                         alignItems="flex-start"
                         w="full"
@@ -532,10 +536,10 @@ export const DetailModal = ({
                           <Text fontWeight="bold" fontSize="16px">
                             Attributes
                           </Text>
-                          <InfoPopOver
+                          {/* <InfoPopOver
                             placement="top"
                             message="General attributes for the NFT that will be not added to the blockchain."
-                          />
+                          /> */}
                         </Flex>
 
                         <VStack w="full">
@@ -551,7 +555,7 @@ export const DetailModal = ({
                     {nft?.serialNumber && (
                       <Flex
                         p="0rem 3rem 1rem 3rem"
-                        borderBottom={"2px"}
+                        borderBottom={"1px"}
                         borderColor={"brand.300"}
                         alignItems="center"
                         justifyContent="space-between"
@@ -562,10 +566,10 @@ export const DetailModal = ({
                           <Text fontWeight="bold" fontSize="16px">
                             Serial Number
                           </Text>
-                          <InfoPopOver
+                          {/* <InfoPopOver
                             placement="top"
                             message="A unique identification number corresponding to the order in which the NFT was minted."
-                          />
+                          /> */}
                         </Flex>
 
                         <Text>{nft?.serialNumber} </Text>
@@ -574,7 +578,7 @@ export const DetailModal = ({
                     {nft?.blockchainId && (
                       <Flex
                         p="0rem 3rem 1rem 3rem"
-                        borderBottom={"2px"}
+                        borderBottom={"1px"}
                         borderColor={"brand.300"}
                         alignItems="center"
                         justifyContent="space-between"
@@ -585,10 +589,10 @@ export const DetailModal = ({
                           <Text fontWeight="bold" fontSize="16px">
                             Blockchain Id
                           </Text>
-                          <InfoPopOver
+                          {/* <InfoPopOver
                             placement="top"
                             message="The ID of this resource on the blockchain."
-                          />
+                          /> */}
                         </Flex>
 
                         <Text>{nft?.blockchainId} </Text>
@@ -596,7 +600,7 @@ export const DetailModal = ({
                     )}
                     {nft?.transactions?.length > 0 && (
                       <Flex
-                        borderBottom={"2px"}
+                        
                         borderColor={"brand.300"}
                         alignItems="center"
                         justifyContent="space-between"
@@ -607,6 +611,7 @@ export const DetailModal = ({
                           transactions={nft?.transactions}
                           buttonPadding="1rem 3rem"
                           contentPadding="0rem 3rem"
+                          bg={"black"}
                         />
                       </Flex>
                     )}
