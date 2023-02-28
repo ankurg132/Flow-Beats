@@ -23,12 +23,12 @@ const HomePage = () => {
           <h1>The Ultimate Entertainment</h1>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus harum excepturi velit eos animi nulla, repudiandae molestias quod dolores consequuntur hic ab, ipsam consectetur!</p>
           <div className="home-button-container">
-          <Link href="/app/games">
-          <button>Games</button>
-          </Link>
-          <Link href="/app/collection"></Link>
-          <button>Collection</button>
-          </Link>
+            <Link href="/app/games">
+              <button>Games</button>
+            </Link>
+            <Link href="/app/collection">
+              <button>Collection</button>
+            </Link>
           </div>
         </div>
         <div className="right-front">
