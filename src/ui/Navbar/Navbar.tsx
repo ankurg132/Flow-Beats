@@ -12,12 +12,12 @@ interface Props {
 }
 
 export const Navbar: React.FunctionComponent<Props> = ({
-  background = "navbar.background",
+  background = "black",
   leftComponent,
   menu,
 }) => {
   return (
-    <Box left="0" top="0" width="100%" shadow="base" position="fixed" zIndex="999">
+    <Box left="0" top="0" width="100%" shadow="base" position="fixed" zIndex="999" borderBottom="1px solid white" >
       <Box as="header" height="100%" bg={background} position="relative">
         <Flex
           as="nav"
