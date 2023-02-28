@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import useInterval from '@use-it/interval'
 import AppLayout from "../../../components/AppLayout"
+import Link from 'next/link'
 
 
 type Apple = {
@@ -336,11 +337,12 @@ export default function SnakeGame() {
 
   return (
     <AppLayout showSidebar={true} title="NFT Collection | MintMe">
-      <main>
+      <main className='main-snake-comntainer'>
         <canvas
           ref={canvasRef}
           width={canvasWidth + 1}
           height={canvasHeight + 1}
+          
         />
         <section>
           <div className="score">
@@ -380,7 +382,9 @@ export default function SnakeGame() {
               <button onClick={startGame}>
                 {countDown === 4 ? 'Restart Game' : countDown}
               </button>
-              <button onClick={() => mintNFT()}>Mint NFT</button>
+              <Link href="/app/new-item">
+              <button >Mint NFT</button>
+              </Link>
               </>
             )}
           </div>
