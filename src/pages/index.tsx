@@ -8,6 +8,7 @@ import { GetNftSetsQuery } from "../../generated/graphql"
 import { useBackendClient } from "../graphql/backendClient"
 import Image from "next/image"
 import homebg from "./homebbg.png"
+import Link from "next/link"
 
 import { BsChevronDown as ChevronDownIcon } from "react-icons/bs"
 import { useRef } from "react"
@@ -22,8 +23,12 @@ const HomePage = () => {
           <h1>The Ultimate Entertainment</h1>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus harum excepturi velit eos animi nulla, repudiandae molestias quod dolores consequuntur hic ab, ipsam consectetur!</p>
           <div className="home-button-container">
+          <Link href="/app/games">
           <button>Games</button>
+          </Link>
+          <Link href="/app/collection"></Link>
           <button>Collection</button>
+          </Link>
           </div>
         </div>
         <div className="right-front">
