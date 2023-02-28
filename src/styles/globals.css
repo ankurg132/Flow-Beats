@@ -391,4 +391,40 @@ footer a {
   margin: 1rem ;
   margin-top: 2rem;
 }
- 
+.tictactoe{
+  color: white;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.tictoe-btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.tictoe-btn button{
+  background-color: #0170f3;
+  background-color:  #5c23a8;;
+  color: white;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 8px;
+  margin: 1rem ;
+  margin-top: 2rem;
+  max-width: fit-content;
+}
+.game__board{
+  color: #11253e;
+}
+.modal__title{
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1.4rem;
+} 
+.game__menu{
+  margin-bottom: 1rem;
+}
