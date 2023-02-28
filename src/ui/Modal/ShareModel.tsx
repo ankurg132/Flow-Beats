@@ -124,19 +124,19 @@ export const ShareModal = ({
   return (
     <Modal onClose={onClose} size="2xl" isOpen={isOpen} isCentered>
       <ModalOverlay />
-      <ModalContent overflow="hidden" p={{ base: "1rem", md: "2rem" }} m="1rem">
-        <Flex gap="0.5rem" flexDirection="column" alignItems="flex-start" w="full">
-          <Heading fontSize="22px">Share</Heading>
+      <ModalContent overflow="hidden" p={{ base: "1rem", md: "2rem" }} m="1rem" bg="black" color="white">
+        <Flex gap="0.5rem" flexDirection="column" alignItems="center" w="full">
+          <Heading fontSize="22px" >Share Your NFT!</Heading>
           <Flex gap="1rem" w="full">
             <InputGroup>
               <Input value={shareUrl} readOnly />
-              <InputRightAddon onClick={handleCopy} cursor="pointer">
+              <InputRightAddon onClick={handleCopy} bg="black" cursor="pointer">
                 {hasCopied ? <CheckIcon /> : <LinkIcon />}
               </InputRightAddon>
             </InputGroup>
           </Flex>
           <Flex justifyContent="space-between" w="full">
-            <Flex alignItems="center" gap="0.5rem">
+            <Flex alignItems="center" gap="0.5rem" bg="black">
               <Text display="inline-flex" pl="2" fontSize="15px" lineHeight="1">
                CHOOSE:
               </Text>
@@ -144,23 +144,22 @@ export const ShareModal = ({
                 disabled={!isOwner}
                 width="fit-content"
                 size="sm"
+               
                 rounded="lg"
                 value={mode}
                 onChange={(e) => setMode(e.target.value)}
               >
-                <option value={ModeTable.VIEW}>View</option>
-                <option value={ModeTable.CLAIM}>Claim NFT</option>
+                <option  value={ModeTable.VIEW}>View</option>
+                <option  value={ModeTable.CLAIM}>Claim NFT</option>
               </Select>
             </Flex>
-            <Button
-              variant="solid"
+            <div
+              
+              className="error-button"
               onClick={handleCopy}
-              size={{ base: "sm", md: "md" }}
-              ml={{ base: "0.3rem" }}
-              isLoading={loading}
             >
               {hasCopied ? "Copied" : "Copy Link"}
-            </Button>
+            </div>
           </Flex>
         </Flex>
       </ModalContent>
