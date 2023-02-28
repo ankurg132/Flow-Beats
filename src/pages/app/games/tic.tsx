@@ -80,7 +80,7 @@ const Tic = () => {
     setModalTitle("")
   }
   return (
-    <AppLayout title="NFT Collection | MintMe">
+    <AppLayout title="Tic Tac Toe | Flow Beats">
       <div className="tictactoe">
         <div className="game">
           <div className="game__menu">

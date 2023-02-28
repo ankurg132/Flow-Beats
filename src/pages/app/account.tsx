@@ -26,6 +26,7 @@ const AccountPage = () => {
 
   const fetching = walletFetching || isLoading
   return (
+<<<<<<< HEAD
     <AppLayout title="Account ">
 
       <Flex justifyContent="center" alignItems="center">
@@ -33,6 +34,10 @@ const AccountPage = () => {
       </Flex> 
 
 
+=======
+    
+    <AppLayout title="Account | Flow Beats ">
+>>>>>>> 2823bb03f4b58a4bd155d8f11f121f03a8c92fe9
       <Flex
         gap="10"
         textAlign="center"

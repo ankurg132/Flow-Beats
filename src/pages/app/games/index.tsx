@@ -8,7 +8,11 @@ import chooseWisely from "./chooseWisely.png"
 
 const Games = () => {
   return (
+<<<<<<< HEAD
     <AppLayout showSidebar={true} title="NFT Collection | MintMe">
+=======
+    <AppLayout  showSidebar={true} title="Games | Flow Beats">
+>>>>>>> 2823bb03f4b58a4bd155d8f11f121f03a8c92fe9
 
       <Flex marginBottom={"5%"} justifyContent="center" alignItems="center">
         <Image src={chooseWisely} alt="chooseWisely" />
