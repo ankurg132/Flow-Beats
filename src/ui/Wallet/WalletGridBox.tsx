@@ -19,6 +19,7 @@ export const WalletGridBox = ({
 }: Props) => {
   return (
     <HStack
+      color="black"
       spacing="4"
       p={{ base: "1rem", md: "2rem 3.5rem" }}
       shadow="base"
@@ -27,19 +28,20 @@ export const WalletGridBox = ({
       flexDir={{ base: "column", md: "row" }}
       alignItems={{ base: "flex-start", md: "center" }}
       justifyContent={{ base: "flex-start", md: "space-between" }}
-      bgColor="white"
+      bgColor="#DEDEDE"
       w="full"
-      _hover={{ bgColor: "red" }}
       onClick={onClick}
+      _hover={{ ".noText": { color: "white" }, ".icon": { color: "white" }, bgColor: "black", color: "white", boxShadow: "0 0 8px 2px #00FF7F" }}
     >
       <HStack spacing="4" w="fit-content">
-        <Icon color="blackAlpha.700" boxSize="6" as={icon} />
-        <Text fontSize="md" textColor="blackAlpha.700" fontWeight="semibold" whiteSpace="pre-wrap">
+        <Icon className="icon" color="black" boxSize="6" as={icon} />
+        <Text className="noText" fontSize="md" textColor="black" fontWeight="semibold" whiteSpace="pre-wrap">
           {title}
         </Text>
       </HStack>
 
-      <HStack spacing="4" alignItems={"center"} maxW="50%">
+      <HStack
+        spacing="4" alignItems={"center"} maxW="50%">
         <Tooltip label={description} isDisabled={!showTooltop} hasArrow placement="top">
           <Text fontSize="md" fontWeight="black" noOfLines={1}>
             {description}
