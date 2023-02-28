@@ -1,6 +1,4 @@
-# Mintme Tool
-
-This is Niftory's Minting app built on Next.js that uses the [Niftory API](https://docs.niftory.com/home/v/api/).
+# FLOW BEATS
 
 ## Usage
 
