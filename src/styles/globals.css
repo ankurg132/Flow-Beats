@@ -381,7 +381,6 @@ footer a {
   margin-bottom: 2rem;
 }
 .menu-containing-btn button{
-  margin-top: 2rem;
   background-color: #0170f3;
   background-color:  #5c23a8;;
   color: white;
@@ -389,5 +388,7 @@ footer a {
   font-weight: 600;
   align-items: center;
   border-radius: 8px;
+  margin: 1rem ;
+  margin-top: 2rem;
 }
  
