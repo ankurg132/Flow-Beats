@@ -11,8 +11,9 @@ export function Logout() {
   return (
     <Button
       p="6"
-      backgroundColor="brand.400"
+      backgroundColor="#DEDEDE"
       fontSize="md"
+      _hover={{ bgColor: "black", color: "white", boxShadow: "0 0 8px 2px red" }}
       onClick={() => {
         signOut()
       }}
