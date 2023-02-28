@@ -1,5 +1,4 @@
 import {
-  Image,
   Link as ChakraLink,
   Button,
   useBreakpointValue,
@@ -14,11 +13,15 @@ import { Navbar as NiftoryNavbar } from "./Navbar"
 import { FiMenu } from "react-icons/fi"
 
 import { FaGoogle, FaRegUser as UserIcon } from "react-icons/fa"
-import { StarIcon} from "@chakra-ui/icons"
+import { StarIcon } from "@chakra-ui/icons"
 import { IoIosAddCircleOutline as AddIcon } from "react-icons/io"
 import { useAuthContext } from "../../hooks/useAuthContext"
 import posthog from "posthog-js"
 import { useRouter } from "next/router"
+
+import Image from "next/image"
+import mainlogo from "../../pages/logo.png"
+
 export const Navbar = ({ onOpen }) => {
   const { session, signIn, isLoading } = useAuthContext()
   let onClick = () => {
@@ -56,7 +59,6 @@ export const Navbar = ({ onOpen }) => {
             </Button>
           ),
         },
-       
       ]
     } else {
       return [
@@ -71,8 +73,7 @@ export const Navbar = ({ onOpen }) => {
                 color="content.400"
                 gap="0.3rem"
               >
-               
-               <div style={{ color: 'white' }}>Games</div>
+                <div style={{ color: "white" }}>Games</div>
               </ChakraLink>
             </Link>
           ),
@@ -94,15 +95,12 @@ export const Navbar = ({ onOpen }) => {
                   })
                 }
               >
-                
-                <div style={{ color: 'white' }}> My Collection</div>
+                <div style={{ color: "white" }}> My Collection</div>
               </ChakraLink>
             </Link>
           ),
         },
-        
 
-        
         {
           href: "/app/account",
           component: (
@@ -115,7 +113,7 @@ export const Navbar = ({ onOpen }) => {
                 gap="0.3rem"
               >
                 {/* <UserIcon size={20} /> */}
-                <div style={{ color: 'white' }}>Account</div>
+                <div style={{ color: "white" }}>Account</div>
               </ChakraLink>
             </Link>
           ),
@@ -143,7 +141,6 @@ export const Navbar = ({ onOpen }) => {
 
   return (
     <>
-    
       <NiftoryNavbar
         leftComponent={
           <>
@@ -155,13 +152,8 @@ export const Navbar = ({ onOpen }) => {
                 icon={<FiMenu />}
               />
             )}
-                      <Link href="/" passHref>
-              <Box
-                boxSize={{ md: "70" }}
-                zIndex="1000"
-                w={{ base: "6rem", md: "13rem" }}
-                py="4px"
-              />
+            <Link href="/" passHref>
+            <Image className="logo_imagee" src={mainlogo} alt="hero" width={240} height={60} />
               
             </Link>
           </>

@@ -64,8 +64,8 @@ export default function Memorygame() {
 
   return (
     <AppLayout title="NFT Collection | MintMe">
-    <div className="container">
-      <div className="menu">
+    <div className="container memory-game-cont">
+      <div className="menu moves-para">
         <p>{`Moves - ${moves}`}</p>
       </div>
 
@@ -89,19 +89,18 @@ export default function Memorygame() {
           );
         })}
       </div>
-      <div className="menu">
-        <p>{`GameOver - ${gameOver}`}</p>
+      <div className="menu menu-containing-btn">
+        {/* <p>{`GameOver - ${gameOver}`}</p> */}
         <button onClick={() => initialize()} className="reset-btn">
           Reset
         </button>
-        <Link href="/app/new-item"><button className="mint-btn">
-      Mint NFT
-    </button>
-    </Link>
+        
         {gameOver && moves < 45 && (
-          <button onClick={() => mintNFT()} className="mint-btn">
+          <Link href="/app/new-item">
+          <button className="mint-btn">
             Mint NFT
           </button>
+          </Link>
   )}
       </div>
     </div>

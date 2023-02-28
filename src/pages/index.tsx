@@ -7,7 +7,6 @@ import { LoginText } from "../ui/Home/LoginText"
 import { GetNftSetsQuery } from "../../generated/graphql"
 import { useBackendClient } from "../graphql/backendClient"
 import Image from "next/image"
-// import gameover from "./homebg.png"
 import homebg from "./homebbg.png"
 
 import { BsChevronDown as ChevronDownIcon } from "react-icons/bs"
@@ -24,7 +23,7 @@ const HomePage = () => {
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus harum excepturi velit eos animi nulla, repudiandae molestias quod dolores consequuntur hic ab, ipsam consectetur!</p>
           <div className="home-button-container">
           <button>Games</button>
-          <button>Collaction</button>
+          <button>Collection</button>
           </div>
         </div>
         <div className="right-front">
