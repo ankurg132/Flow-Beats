@@ -7,7 +7,7 @@ import { CollectibleCreateForm } from "../../../components/form/CollectibleCreat
 const NewItemPage = () => {
   return (
     <>
-      <AppLayout title="Create New NFT | MintMe">
+      <AppLayout title="Mint NFT | Flow Beats">
         <VStack w="full" p="1rem" my="3rem" gap="3rem">
           <Center px={{ base: "0", md: "1rem" }} w="full" flexDirection="column">
             <Center mb={{ base: "1rem", md: "4rem" }} px={{ base: "0", md: "1.4rem" }}>

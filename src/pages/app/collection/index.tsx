@@ -7,16 +7,12 @@ import yourCollection from "./yourCollection.png"
 
 const CollectionPage = () => {
   return (
-<<<<<<< HEAD
-    <AppLayout showSidebar={true} title="NFT Collection | MintMe">
+    <AppLayout title="Collaction | Flow Beats">
 
       <Flex marginBottom={"4%"} justifyContent="center" alignItems="center">
         <Image src={yourCollection} alt="your collection" />
       </Flex>
 
-=======
-    <AppLayout showSidebar={true} title="Collection | Flow Beats">
->>>>>>> 2823bb03f4b58a4bd155d8f11f121f03a8c92fe9
       <UserNFTCollection />
     </AppLayout>
   )
