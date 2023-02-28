@@ -78,7 +78,7 @@ export const WalletDetails = (props: WalletDetailsProps) => {
               <WalletGridBox
                 description={nfts?.items?.length ?? ""}
                 icon={WalletItemsIcon}
-                title={"Number of Items"}
+                title={"Items"}
                 onClick={() => router.push("/app/games")}
               />
 
@@ -88,7 +88,7 @@ export const WalletDetails = (props: WalletDetailsProps) => {
               <WalletGridBox
                 description={walletOwnerEmail}
                 icon={WalletOwnerIcon}
-                title={"Wallet Owner"}
+                title={"Owner"}
                 showTooltop
               />
 
