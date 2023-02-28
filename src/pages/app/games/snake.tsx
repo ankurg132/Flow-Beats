@@ -336,7 +336,7 @@ export default function SnakeGame() {
   };
 
   return (
-    <AppLayout showSidebar={true} title="NFT Collection | MintMe">
+    <AppLayout showSidebar={true} title="Snake Game | Flow Beats">
       <main className='main-snake-comntainer'>
         <canvas
           ref={canvasRef}

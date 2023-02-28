@@ -16,7 +16,7 @@ const HomePage = () => {
   const scrollRef = useRef<HTMLDivElement>()
 
   return (
-    <AppLayout>
+    <AppLayout title="Flow Beats">
       <div className="front-page-container">
         <div className="left-front">
           <h1>The Ultimate Entertainment</h1>
