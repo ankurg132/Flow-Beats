@@ -1,5 +1,20 @@
 # FLOW BEATS
 
+Are you tired of playing games that don't pay off? Well, with Flow Beats, you can finally put the "play" in "pay-to-play"!
+
+So, get ready to dive into Flow Beats, the ultimate multi-gaming platform built on Flow!
+Our P2E (Play-to-Earn) model and in-game rewards system is designed to help you earn valuable rewards while playing your favourite games.
+
+By using Flow Beats, you can enjoy a wide variety of games all in one place. Whether you're into indie games, or casual puzzle games, we've got something for everyone. And with our in-game rewards system, you'll be able to earn valuable rewards that can be redeemed for real-world value.
+
+But what really sets us apart is our easy onboarding process. Flow Beats leveraged the Niftory's wallet and NFT API, which includes Niftory's social login and add or switch wallet feature. This means you can easily create and manage digital assets directly within the game interface, without the need for a separate wallet. We've eliminated the complexity and friction associated with blockchain transactions, making it easier for you to engage with our games and earn valuable rewards.
+You can also buy and sell your digital assets directly from the platform.
+
+Flow Beats makes it easy for you to find the games you love and earn rewards while doing it. It's literary just
+
+Wake Up 2. Play 3. Eat 4. Sleep 5. Repeat.
+So whether you're a hardcore gamer or just looking for a casual gaming experience, Flow Beats has something for everyone.
+
 ## Usage
 
 ### Configuration
