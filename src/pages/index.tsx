@@ -21,14 +21,15 @@ const HomePage = () => {
       <div className="front-page-container">
         <div className="left-front">
           <h1>The Ultimate Entertainment</h1>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus harum excepturi velit eos animi nulla, repudiandae molestias quod dolores consequuntur hic ab, ipsam consectetur!</p>
+          <p>Introducing the revoluionary way to play games based <br/> on P2E model with in-game rewards. Experience
+          the <br /> thrill  of Play-to-Earn NFT Gaming with flow beats.</p>
           <div className="home-button-container">
             <Link href="/app/games">
-              <button>Games</button>
+              <button>Try us -> </button>
             </Link>
-            <Link href="/app/collection">
+            {/* <Link href="/app/collection">
               <button>Collection</button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="right-front">

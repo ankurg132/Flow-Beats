@@ -167,9 +167,9 @@ export const ItemDetail = ({ nftModel, nft }: Props) => {
       py={{ base: "4" }}
     >
       <MintRequestModal disclosure={disclosure} />
-      <Heading>{nftModel.title}</Heading>
-      <Text fontSize="0.8rem" mb="2rem" fontStyle="italic">
-        An NFT from MintMe
+      <Heading color={"white"}>{nftModel.title}</Heading>
+      <Text fontSize="0.8rem" color="white" mb="2rem" fontStyle="italic">
+        An NFT from Flow Beats
       </Text>
       <Stack
         direction={{ base: "column", lg: "row" }}
