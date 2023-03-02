@@ -66,5 +66,3 @@ The browser's [GraphQL client](src/components/GraphQLClientProvider.tsx) then in
 If you want to make requests using the app's credentials instead of the User's credentials for performing admin only tasks then that can be done using the [Serverside GraphQL Client](src/graphql/getClientForServer.ts).
 
 Note - This client should not be used in the frontend, it should either be used in the backend of your app or in the [NextJS API Routes](https://nextjs.org/docs/api-routes/introduction). 
-
-
