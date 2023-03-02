@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react"
 import Link from "next/link";
 import React from "react"
 import { useEffect, useState } from "react";
@@ -15,11 +14,11 @@ export default function Memorygame() {
   // const [moves, setMoves] = useState(0);
   useEffect(() => {
     initialize();
-    
+
   }, []);
 
   const router = useRouter();
-  const [previousUrl, setPreviousUrl] = useState('');
+  // const [previousUrl, setPreviousUrl] = useState('');
 
   useEffect(() => {
     sessionStorage.setItem('currentUrl', router.asPath);
