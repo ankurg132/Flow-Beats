@@ -25,7 +25,7 @@ const HomePage = () => {
           the <br /> thrill  of Play-to-Earn NFT Gaming with flow beats.</p>
           <div className="home-button-container">
             <Link href="/app/games">
-              <button>Try us -> </button>
+              <button>Try us: </button>
             </Link>
             {/* <Link href="/app/collection">
               <button>Collection</button>
