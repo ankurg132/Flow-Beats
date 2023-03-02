@@ -15,6 +15,7 @@ export default function Memorygame() {
   // const [moves, setMoves] = useState(0);
   useEffect(() => {
     initialize();
+    
   }, []);
 
   const router = useRouter();
