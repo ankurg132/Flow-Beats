@@ -12,7 +12,7 @@ You can also buy and sell your digital assets directly from the platform.
 
 Flow Beats makes it easy for you to find the games you love and earn rewards while doing it. It's literary just
 
-Wake Up 2. Play 3. Eat 4. Sleep 5. Repeat.
+1. Wake Up 2. Play 3. Eat 4. Sleep 5. Repeat.
 So whether you're a hardcore gamer or just looking for a casual gaming experience, Flow Beats has something for everyone.
 
 ## Usage
