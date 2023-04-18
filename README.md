@@ -27,6 +27,7 @@ See [.env.example](./.env.example) for an example of how to configure these envi
 
 To install the dependencies of this app.
 
+Use:
 ```
 yarn install
 ```
