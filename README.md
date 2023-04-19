@@ -35,7 +35,6 @@ yarn install
 ### Running the app
 
 Once your `.env` file is set up, you can run the app locally with:
-
 ```
 yarn dev
 ```
